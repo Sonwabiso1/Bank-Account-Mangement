@@ -8,7 +8,7 @@ public class Admin extends Person {
         for (BankAccount account : bank.getAccounts()) {
             System.out.println("Account Number: " + account.accountNumber +
                                ", Account Holder: " + account.accountHolder.name +
-                               ", Balance: " + account.balance);
+                               ", Balance: R" + account.balance);
         }
     }
 

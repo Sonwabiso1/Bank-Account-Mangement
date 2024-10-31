@@ -42,7 +42,7 @@ public class Bank {
         try {
             fromAccount.withdraw(amount);
             toAccount.deposit(amount);
-            System.out.println("Transferred " + amount + " from Account " + fromAccountNumber +
+            System.out.println("Transferred R" + amount + " from Account " + fromAccountNumber +
                                " to Account " + toAccountNumber);
         } catch (Exception e) {
             System.out.println("Transfer failed: " + e.getMessage());
@@ -79,8 +79,10 @@ public class Bank {
 
                         if (accountType == 1) {
                             addAccount(new SavingsAccount(accountNumber, accountHolder));
+                            System.out.println(accountHolder.name +" Savings Account added.");
                         } else if (accountType == 2) {
                             addAccount(new CheckingAccount(accountNumber, accountHolder));
+                            System.out.println("Checkings Account added");
                         } else {
                             System.out.println("Invalid account type.");
                         }
@@ -89,7 +91,7 @@ public class Bank {
                     case 2:
                         System.out.print("Enter account number: ");
                         int depositAccount = scanner.nextInt();
-                        System.out.print("Enter deposit amount: ");
+                        System.out.println("Enter deposit amount: ");
                         double depositAmount = scanner.nextDouble();
                         depositToAccount(depositAccount, depositAmount);
                         break;

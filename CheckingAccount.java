@@ -7,7 +7,7 @@ public class CheckingAccount extends BankAccount {
     @Override
     public void deposit(double amount) {
         balance += amount;
-        System.out.println("Deposited " + amount + " into Checking Account.");
+        System.out.println(accountHolder.name +  " Deposited R" + amount + " into Checking Account.");
     }
 
     @Override
@@ -16,6 +16,6 @@ public class CheckingAccount extends BankAccount {
             throw new Exception("Insufficient funds in Checking Account.");
         }
         balance -= amount;
-        System.out.println("Withdrew " + amount + " from Checking Account.");
+        System.out.println(accountHolder.name + " Withdrew R" + amount + " from Checking Account.");
     }
 }

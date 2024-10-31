@@ -13,6 +13,6 @@ public abstract class BankAccount {
     public abstract void withdraw(double amount) throws Exception;
 
     public void displayBalance() {
-        System.out.println("Account Number: " + accountNumber + ", Balance: " + balance);
+        System.out.println(accountHolder.name + ", " + "Account Number: " + accountNumber + ", Balance: " + balance);
     }
 }
